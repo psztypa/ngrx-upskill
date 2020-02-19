@@ -11,4 +11,8 @@ export class ProductItemComponent  {
   @Input()
   product: Product;
 
+  onClick():void {
+    console.log('clicl')
+  }
+
 }

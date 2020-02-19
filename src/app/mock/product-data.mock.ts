@@ -14,7 +14,7 @@ export class ProductData implements InMemoryDbService {
             {
                 _id: "2",
                 name: 'Garden Cart',
-                isOnSale: false,
+                isOnSale: true,
                 price: 4.2
             },
             {
@@ -31,8 +31,8 @@ export class ProductData implements InMemoryDbService {
             },
             {
                 _id: '10',
-                name: 'V_ideo Game Controller',
-                isOnSale: false,
+                name: 'Game Controller',
+                isOnSale: true,
                 price: 4.6
             }
         ];
