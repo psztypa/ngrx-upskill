@@ -1,5 +1,30 @@
 <div class="top-menu">
-    <mat-checkbox class="example-margin" [checked]="showOnlyOnSale$ | async"  (change)="checkChanged($event.checked)" >
-        Show only 'on sale'
-    </mat-checkbox>
+    <mat-grid-list cols="4" rowHeight="50px" class="header">
+
+        <mat-grid-tile>
+            <a [routerLink]="['/']"  >
+                <button mat-raised-button color="primary" >Home</button>
+            </a>            
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <a [routerLink]="['/products']"  >
+                <button mat-raised-button color="primary" >Show products</button>
+            </a>            
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <mat-checkbox class="example-margin" [checked]="showOnlyOnSale$ | async"
+                (change)="checkChanged($event.checked)">
+                Show only 'on sale'
+            </mat-checkbox>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+            <p>
+                <span matBadge="{{badgeCount}}" matBadgePosition="before" matBadgeOverlap="false">Event count</span>
+            </p>
+        </mat-grid-tile>
+
+    </mat-grid-list>
 </div>

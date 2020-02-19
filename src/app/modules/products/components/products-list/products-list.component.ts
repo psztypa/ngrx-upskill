@@ -26,7 +26,7 @@ export class ProductsListComponent implements OnInit, OnDestroy {
     const products$ = this.store.pipe(select(fromProduct.getProducts));
     const showOnlyOnSale$ = this.store.pipe(select(fromMenu.getShowOnlyOnSale));
 
-    showOnlyOnSale$.pipe(
+    this. sub = showOnlyOnSale$.pipe(
       switchMap(value => products$
         .pipe(
           map(prods => prods.filter(prod => value ? prod.isOnSale === true : prod))
